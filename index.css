@@ -17,6 +17,7 @@ body {
 #container {
     margin: 0;
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -28,6 +29,7 @@ body {
 }
 
 #center {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,8 +72,7 @@ body {
     font-size: 21px;
     margin-top: 8px;
     text-align: center;
-    min-width: 24rem;
-    max-width: 34rem;
+    width: 100%;
 }
 
 #textbutton {
