@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #202020;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#title {
+    width: 27rem;
+}
+
+.whitetitle {
+    color: #FFFFFF;
+    font-family: 'Roboto Mono Regular';
+    text-shadow: 0 2px 0px #ABABAB;
+    transition: 0.3s ease-out;
+    text-align: center;
+}
+
+.whitetitle:hover {
+    text-shadow: 0 2px 0px #ABABAB, 0 0px 28px #ABABAB;
+}
+
+
+.pinktitle {
+    color: #FF84DC;
+    font-family: 'Roboto Mono Regular';
+    text-shadow: 0 2px 0px #CB4DA7, 0 0px 50px #FF84DC;
+    transition: 0.3s ease-out;
+    text-align: center;
+}
+
+.pinktitle:hover {
+    text-shadow: 0 2px 0px #CB4DA7, 0 0px 70px #FF84DC;
+}
+
+#description {
+    color: #fff;
+    font-family: 'Roboto Mono Regular';
+    font-size: 21px;
+    margin-top: 8px;
+    text-align: center;
+    width: 34rem;
+}
+
+#textbutton {
+    color: #ffddff;
+    font-family: 'Roboto Mono Regular';
+    font-size: 21px;
+    margin-top: 20px;
+    text-decoration: underline;
+    text-shadow: 0 0px 30px #ffddff;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+
+#textbutton:hover {
+    color: #ffa8ff;
+    text-shadow: 0 0px 30px #ffa8ff;
+}
+
+#heart {
+    margin: 0;
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    opacity: 0%;
+}
