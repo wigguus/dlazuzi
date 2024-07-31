@@ -6,6 +6,8 @@
 html, body {
     height: 100%;
     overflow: hidden;
+}
+
 body {
     background: #202020;
     display: flex;
@@ -78,6 +80,8 @@ body {
     margin-top: 8px;
     text-align: center;
     width: fit-content;
+    word-wrap: break-word;
+    max-width: 30ch;
 }
 
 #textbutton {
