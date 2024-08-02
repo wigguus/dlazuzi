@@ -100,13 +100,16 @@ var text = ["Kocham Cię.",
 function onHeartClicked() {
     document.getElementById("heart").style.opacity = "1";
     document.getElementById("heart").style.top = "50%";
+    document.getElementById("heart").style.transform = "scale(1.3)";
     setTimeout(function () { 
         document.getElementById("title").style.display = "none";
-        document.getElementById("textbutton").style.display = "none";
+        document.getElementById("textbutton").style.display = "block";
+        document.getElementById("textbutton").innerHTML = "Losuj Kolejny Tekst!"
         
         document.getElementById("description").innerText = text[(Math.floor(Math.random() * text.length))] + " ~ Twój Paweł :3"
         document.getElementById("heart").style.top = "125%";
         document.getElementById("heart").style.opacity = "0";
+        document.getElementById("heart").style.transform = "scale(1.0)";
     }, 2500)
     
 }
