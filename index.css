@@ -102,6 +102,8 @@ body {
 }
 
 #heart {
+    height: 750px;
+    width: 750px;
     margin: 0;
     position: absolute;
     top: 125%;
