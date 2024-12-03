@@ -1,0 +1,31 @@
+#input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px 0 3px 0;
+}
+
+#input-container > * {
+    margin: 0px 10px;
+}
+
+input {
+    font-family: 'Roboto Mono Regular';
+    padding: 13px 10px;
+    background: #161616;
+    border: 0px;
+    color: white;
+    font-size: 17px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px #0000007c;
+    transition: 0.2s ease-in-out;
+}
+
+input:hover {
+    box-shadow: 0 0 35px #2a252b96;
+}
+
+input:focus {
+    outline: none;
+}

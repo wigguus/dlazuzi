@@ -6,6 +6,7 @@
     <link rel="icon" href="assets/icon.png">
     <link rel="stylesheet" href="fonts/style.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="lcalc.css">
 
     <meta content="Dla Zuzi!" property="og:title" />
     <meta content="Strona powstała by uwydatnić moje uczucie do mojej miłości :3" property="og:description" />
@@ -18,24 +19,30 @@
 <body>
     <div id="container">
         <div id="center">
-            <h1 id="title"><span class="whitetitle">Kocham Cię&nbsp;</span><span class="pinktitle">Zuzia&lt;3</span></h1>
-            <h2 id="description">Ta strona powstała, żeby przypominać Ci<br>jak ważna dla mnie jesteś.</h2>
+            <h1 id="title"><span class="whitetitle" id="whitetitle1">Prawdziwy Kalkulator&nbsp;</span><span class="pinktitle">Miłości<3</span></h1>
 
-            <div id="textbutton" onclick="onHeartClicked()">Kliknij Tutaj!</div>
+            <div id="input-container">
+                <input id="inpt1" type="text" min="1" max="30" placeholder="Zuzia"/>
+                <input id="inpt2" type="text" min="1" max="30" placeholder="Paweł"/>
+            </div>
+
+            <h2 id="description">Ta strona jest jedynym prawdziwym<br>kalkulatorem Miłości</h2>
+
+            <div id="textbutton" onclick="onHeartClicked()">Oblicz!</div>
         </div>
 
     </div>
 
     <div id="menu">
-            <div class="menuitem-selected">
-                <img src="assets/heart.png" width="85px" height="85px"/>
+            <div class="menuitem">
+                <img src="assets/heart.png" width="85px" height="85px" onclick="window.location.href = 'index.html';"/>
             </div>
-            <div class="menuitem" onclick="window.location.href = 'lcalc.html';">
+            <div class="menuitem-selected">
                 <img src="assets/lcalc.png" width="85px" height="85px"/>
             </div>
     </div>
 
     <img src="assets/heart.png" id="heart" />
-    <script src="index.js"></script>
+    <script src="lcalc.js"></script>
 </body>
 </html>

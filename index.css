@@ -11,23 +11,16 @@ html, body {
 body {
     background: rgb(32,32,32);
     background: radial-gradient(circle, rgba(32,32,32,1) 0%, rgba(17,17,17,1) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
 }
 
 #container {
     margin: 0;
     position: absolute;
-    width: fit-content;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -113,3 +106,42 @@ body {
     overflow: hidden;
     opacity: 0%;
 }
+
+
+
+
+#menu {
+    transform: translate(50%, 0%);
+    position: absolute;
+    right: 50%;
+    top:0%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(10, 10, 10, 0.719);
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.40);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuitem, .menuitem-selected {
+    padding: 25px;
+    width: 85px;
+    height: 85px;
+    transition: 0.2s ease-in-out;
+    filter: drop-shadow(0 0 10px #ffddff55);
+    cursor: pointer;
+}
+
+.menuitem-selected {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #ffddff9d);
+}
+
+.menuitem:hover, .menuitem-selected:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #ffddff7e);
+}
+

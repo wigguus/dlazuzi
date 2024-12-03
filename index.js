@@ -97,17 +97,73 @@ var text = ["Kocham Cię.",
 "Nigdy się nie narzucasz, zawsze poprawiasz mi humor!",
 "Aż trudno opisać moją chęć przytulenia Cię"]
 
+let leftTimeLet = 59;
+
+function cookieChecker() {
+    if (document.cookie.includes("leftTime") && document.cookie.includes("-")) {
+        deleteAllCookies();
+    }
+
+    if (document.cookie.includes("leftTime=0")) {
+        deleteAllCookies();
+    }
+
+    if (document.cookie.includes("leftTime")) {
+        leftTimeLet = document.cookie.split("=")[1].split(";")[0];
+        var intr = setInterval(() => {
+            deleteAllCookies();
+            leftTimeLet -= 1;
+            document.cookie = "leftTime=" + leftTimeLet  + ";"; 
+            if (leftTimeLet < 1) {
+                clearInterval(intr);
+                document.getElementById("textbutton").innerHTML = "Kliknij Tutaj!"
+            }
+        }, 1000);
+    }
+}
+
+cookieChecker();
+
+
+
 function onHeartClicked() {
-    document.getElementById("heart").style.opacity = "1";
-    document.getElementById("heart").style.top = "50%";
-    setTimeout(function () { 
-        document.getElementById("title").style.display = "none";
-        document.getElementById("textbutton").style.display = "block";
-        document.getElementById("textbutton").innerHTML = "Losuj Kolejny Tekst!"
-        
-        document.getElementById("description").innerText = text[(Math.floor(Math.random() * text.length))] + " ~ Twój Paweł :3"
-        document.getElementById("heart").style.top = "125%";
-        document.getElementById("heart").style.opacity = "0";
-    }, 2500)
+    if (!document.cookie.includes("leftTime")) {
+        document.getElementById("heart").style.opacity = "1";
+        document.getElementById("heart").style.top = "50%";
+        setTimeout(function () { 
+            document.getElementById("title").style.display = "none";
+            document.getElementById("textbutton").style.display = "block";
+            document.getElementById("textbutton").innerHTML = "Losuj Kolejny Tekst!"
+            
+            document.getElementById("description").innerText = text[(Math.floor(Math.random() * text.length))] + " ~ Twój Paweł :3"
+            document.getElementById("heart").style.top = "125%";
+            document.getElementById("heart").style.opacity = "0";
+        }, 2500)
     
+        document.cookie = "leftTime=59;";
+        cookieChecker()
+    } else {
+        document.getElementById("textbutton").innerHTML = "Nie oszukujemy! (" + leftTimeLet + "s)";
+        var intr2 = setInterval(() => {
+            document.getElementById("textbutton").innerHTML = "Nie oszukujemy! (" + leftTimeLet + "s)";
+            if (leftTimeLet <= 0) {
+                cookieChecker();
+                document.getElementById("textbutton").innerHTML = "Losuj Kolejny Tekst!"
+                clearInterval(intr2);
+            }
+            
+        }, 1000);
+    }
+    
+    
+    
+}
+
+
+function deleteAllCookies() {
+    document.cookie.split(';').forEach(cookie => {
+        const eqPos = cookie.indexOf('=');
+        const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    });
 }
