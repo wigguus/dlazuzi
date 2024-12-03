@@ -39,6 +39,7 @@ function onHeartClicked() {
                 "pawciołek",
                 "pawlonek", 
                 "paweł",
+                "pawel",
                 "virkyu",
                 "wiggy",
                 "wigguś",
