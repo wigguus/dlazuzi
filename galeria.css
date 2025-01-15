@@ -1,0 +1,69 @@
+#list-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: 3rem;
+    width: 34rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#list-gallery > li > img {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+#list-gallery > li > h2 {
+    font-size: 1.8rem;
+}
+
+#list-gallery > li > p {
+    font-size: 1.4rem;
+    width: 40ch;
+    margin-top: 0.5rem;
+}
+
+#list-gallery > li {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    scroll-behavior: smooth;
+    
+}
+
+.datetitle {
+    color: #FFB3BF;
+    font-family: 'Roboto Mono Regular';
+    text-shadow: 0 2px 0px #ffb3be9d;
+    transition: 0.3s ease-out;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.arrow-navigate {
+    font-size: 5rem;
+    color:white;
+    font-weight: 300;
+    position: absolute; 
+    top: 45%;
+    cursor: pointer;
+    transition: 0.2s;
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.774);
+}
+
+.arrow-navigate:hover {
+    transform: scale(1.1);
+}
+
+.arrow-navigate:active {
+    transform: scale(0.9);
+}
+
+#arrowcontainer > span:first-child {
+    left: 5rem; 
+}
+
+#arrowcontainer > span:last-child {
+    right: 5rem; 
+}
+
