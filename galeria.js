@@ -1,4 +1,4 @@
-let actualImage = 2;
+let actualImage = 1;
 let blockScrolling = false;
 
 function plusImage() {
