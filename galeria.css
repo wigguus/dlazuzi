@@ -52,6 +52,11 @@
     text-shadow: 0 0 25px rgba(0, 0, 0, 0.774);
 }
 
+#arrow1, #arrow2, #arrow1:active, #arrow1:visited, #arrow2:active, #arrow2:visited {
+    text-decoration: none;
+    color:white;
+}
+
 .arrow-navigate:hover {
     transform: scale(1.1);
 }
