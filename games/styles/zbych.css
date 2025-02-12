@@ -1,0 +1,154 @@
+:root {
+    --zbychColor: #00FF00; 
+}
+
+html, body {
+    overflow-y:auto !important;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+#actuall-game {
+    width: 25vw;
+    min-width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#keyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 10rem;
+}
+
+.keyboard-button {
+    font-size: 2rem;
+    border-radius: 0.7rem;
+    padding: 0.8rem 0.8rem;
+    color: white;
+    font-weight: 500;
+    font-family: "Inter", serif;
+    background-color: #FFB3BF;
+    margin: 0.25rem;
+    width: 2rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.keyboard-button:hover {
+    box-shadow: 0 0 15px #ffb3be6c;
+    background-color: #d3959f;
+}
+
+.keyboard-button:active {
+    transform: scale(0.9);
+}
+
+#game-zbycho {
+    width: fit-content;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#game-zbycho > h1 {
+    color: var(--zbychColor);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: "Inter", serif;
+}
+
+#game-zbycho-image {
+    width: 450px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2rem;
+    box-shadow: 0 0 15px var(--zbychColor),
+                0 0 0 0.5rem inset var(--zbychColor);
+    background-image: url(../../assets/zbych/game-icon/bg.png);
+}
+
+#password {
+    letter-spacing: 0.2rem;
+    font-size: 3.25rem;
+    margin-bottom: 2rem;
+    font-family: "Inter", serif;
+    color: #FFB3BF;
+}
+
+#notif {
+    transition: 0.2s;
+    display: flex;
+    position: absolute;
+    width: 23vw;
+    flex-direction: column;
+    height: 10rem;
+    box-shadow: 0 0 50px black,
+                0 0 0 10000px rgba(0, 0, 0, 0.514);
+    color: white;
+    font-family: "Inter", serif;
+    font-weight: 800;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    font-size: 2rem;
+    background: #1a1a1a;
+    padding: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.2s;
+    display: none;
+}
+
+#notif > button {
+    margin-top: 1rem;
+    padding: 1rem 2rem; 
+    border: 0 solid transparent;
+    border-radius: 0.4rem;
+    color: white;
+    background:#FFB3BF;
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow: 0 0 15px #FFB3BF;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#notif > button:hover {
+    box-shadow: 0 0 30px #ffb3be91;
+    background:#d898a2;
+}
+
+#notif > button:active {
+    transform: scale(0.9);
+}
+
+#notif > button > img {
+    margin-right: 0.3rem;
+}

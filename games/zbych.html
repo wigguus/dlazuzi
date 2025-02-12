@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../fonts/style.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="styles/zbych.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <meta content="Dla Zuzi!" property="og:title" />
+    <meta content="Strona powstała by uwydatnić moje uczucie do mojej miłości :3" property="og:description" />
+    <meta content="https://dlazuzi.xyz/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/wigguus/dlazuzi/main/assets/icon.png" property="og:image" />
+    <meta content="#FF84DC" data-react-helmet="true" name="theme-color" />
+    
+    <title>Dla Zuzi</title>
+</head>
+<body onload="cryptPassword()">
+    <div id="container">
+        <div id="center">
+            <div id="game-container">
+                <div id="actuall-game">
+
+                    <h1 id="password">Bardzo Kocham Zuzie<3</h1>
+
+                    <div id="keyboard">
+                        <p class="keyboard-button" onclick="checkLetter('A')" id="keyboardA">A</p>
+                        <p class="keyboard-button" onclick="checkLetter('B')" id="keyboardB">B</p>
+                        <p class="keyboard-button" onclick="checkLetter('C')" id="keyboardC">C</p>
+                        <p class="keyboard-button" onclick="checkLetter('D')" id="keyboardD">D</p>
+                        <p class="keyboard-button" onclick="checkLetter('E')" id="keyboardE">E</p>
+                        <p class="keyboard-button" onclick="checkLetter('F')" id="keyboardF">F</p>
+                        <p class="keyboard-button" onclick="checkLetter('G')" id="keyboardG">G</p>
+                        <p class="keyboard-button" onclick="checkLetter('H')" id="keyboardH">H</p>
+                        <p class="keyboard-button" onclick="checkLetter('I')" id="keyboardI">I</p>
+                        <p class="keyboard-button" onclick="checkLetter('J')" id="keyboardJ">J</p>
+                        <p class="keyboard-button" onclick="checkLetter('K')" id="keyboardK">K</p>
+                        <p class="keyboard-button" onclick="checkLetter('L')" id="keyboardL">L</p>
+                        <p class="keyboard-button" onclick="checkLetter('M')" id="keyboardM">M</p>
+                        <p class="keyboard-button" onclick="checkLetter('N')" id="keyboardN">N</p>
+                        <p class="keyboard-button" onclick="checkLetter('O')" id="keyboardO">O</p>
+                        <p class="keyboard-button" onclick="checkLetter('P')" id="keyboardP">P</p>
+                        <p class="keyboard-button" onclick="checkLetter('Q')" id="keyboardQ">Q</p>
+                        <p class="keyboard-button" onclick="checkLetter('R')" id="keyboardR">R</p>
+                        <p class="keyboard-button" onclick="checkLetter('S')" id="keyboardS">S</p>
+                        <p class="keyboard-button" onclick="checkLetter('T')" id="keyboardT">T</p>
+                        <p class="keyboard-button" onclick="checkLetter('U')" id="keyboardU">U</p>
+                        <p class="keyboard-button" onclick="checkLetter('V')" id="keyboardV">V</p>
+                        <p class="keyboard-button" onclick="checkLetter('W')" id="keyboardW">W</p>
+                        <p class="keyboard-button" onclick="checkLetter('X')" id="keyboardX">X</p>
+                        <p class="keyboard-button" onclick="checkLetter('Y')" id="keyboardY">Y</p>
+                        <p class="keyboard-button" onclick="checkLetter('Z')" id="keyboardZ">Z</p>
+                    </div>
+                </div>
+
+                <div id="game-zbycho">
+                    <h1 id="statusZbysia">Zbyś Chilluje</h1>
+                    <div id="game-zbycho-image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu">
+            <div class="menuitem">
+                <img src="../assets/heart.png" width="85px" height="85px" onclick="window.location.href = '../index.html';"/>
+            </div>
+            <div class="menuitem" onclick="window.location.href = '../lcalc.html';">
+                <img src="../assets/lcalc.png" width="85px" height="85px"/>
+            </div>
+            <div class="menuitem">
+                <img src="../assets/trophy.png" width="85px" height="85px" onclick="window.location.href = '../galeria.html';"/>
+            </div>
+            <div class="menuitem-selected">
+                <img src="../assets/gamecontroller.png" width="85px" height="85px" onclick="window.location.href = '../games.html';"/>
+            </div>
+    </div>
+
+    <div id="notif">
+        <p id="notifText">Brawo, odgadłaś hasło!</p>
+        <button onclick="location.reload()"><img width="15px" src="../assets/restart.png" />Zagraj Ponownie!</button>
+    </div>
+    <script src="../index.js"></script>
+    <script src="js/zbych.js"></script>
+</body>
+</html>

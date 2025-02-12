@@ -1,0 +1,33 @@
+.btn-game:nth-child(1) {
+    width: 20vw;
+    padding: 5rem 0;
+    min-width: fit-content;
+    font-size: 2rem;
+    font-weight: 800 ;
+    text-align: center;
+    border-radius: 1rem;
+    border: 0.5rem solid white;
+    background-image: url(assets/zbych/game-icon/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    text-shadow: 0 0 15px white,
+                 0 0 45px white;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.575),
+                0 0 50px rgba(0, 0, 0, 0.575);
+    background-size: 100% ;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-game:hover {
+    border: 0.4rem solid white;
+    transform: scale(1.1);
+}
+
+.inter-font-800 {
+    font-family: "Inter", serif;
+    font-weight: 800;
+    font-style: normal;
+}
